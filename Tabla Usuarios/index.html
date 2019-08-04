@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library Barcelona !!</title>
+    
+    <!--Styles-->    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="Css/index.css"/>
+    <link rel="stylesheet" href="Css/MenuView.css"/>
+    <link rel="stylesheet" href="Css/HeaderView.css"/>
+    <link rel="stylesheet" href="Css/ContentView.css"/>
+    <link rel="stylesheet" href="Css/BooksView.css"/>
+    <link rel="stylesheet" href="Css/UsersView.css"/>
+    <link rel="stylesheet" href="Css/LendsView.css"/>
+    <link rel="stylesheet" href="Css/RoomsView.css"/>
+    <link rel="stylesheet" href="Css/RoomReservationsView.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    
+    <!--App-->    
+    <script src="Scripts/app.js"></script>
+
+    <!--Models-->
+    <script src="Scripts/Models/Book.js"></script>
+    <script src="Scripts/Models/User.js"></script>
+    <script src="Scripts/Models/Lend.js"></script>
+    <script src="Scripts/Models/Room.js"></script>
+    <script src="Scripts/Models/RoomReservation.js"></script>
+
+    <!--Handlers-->
+    <script src="Scripts/Handlers/TableHandler.js"></script>
+    <script src="Scripts/Handlers/InputDataHandler.js"></script>
+    <script src="Scripts/Handlers/DropDownHandler.js"></script>
+    
+    <!--Views-->
+    <script src="Scripts/Views/MenuViewModel.js"></script>
+    <script src="Scripts/Views/UsersViewModel.js"></script>
+    <script src="Scripts/Views/BooksViewModel.js"></script>
+    <script src="Scripts/Views/LendsViewModel.js"></script>   
+    <script src="Scripts/Views/RoomsViewModel.js"></script>  
+    <script src="Scripts/Views/RoomReservationsViewModel.js"></script>  
+    
+
+</head>
+<body>
+    <div id="IndexView">
+
+        <div class="MenuView">
+            <table class="MenuTable">
+                <tr>
+                    <td>
+                        <button type="button" class="pure-material-button-contained" onclick="App.ShowView(MenusViews.Books)">Books</button><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="pure-material-button-contained" onclick="App.ShowView(MenusViews.Users)">Users</button><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="pure-material-button-contained" onclick="App.ShowView(MenusViews.Lends)">Lends</button><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="pure-material-button-contained" onclick="App.ShowView(MenusViews.Rooms)">Rooms</button><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="pure-material-button-contained" onclick="App.ShowView(MenusViews.RoomsReservations)">Room Reservations</button><br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="HeaderView">
+            <h1>Library Barcelona !!</h1>
+        </div>
+        <div class="ContentView">
+            <div id="BooksView">
+                <div>
+                    <h2>Add new book</h1>
+                </div>
+                <table>
+                    <tr>
+                        <td>Title:</td>
+                        <td><input type="text" property="Title" required placeholder="What is the book's title?" pattern=".*\S.*"></td>
+                    </tr>
+                    <tr>
+                        <td>Author:</td>
+                        <td><input type="text" property="Author" required placeholder="What is the book's author?" pattern=".*\S.*"></td>                        
+                    </tr>            
+                    <tr>
+                        <td>Year:</td>
+                        <td><input type="number" property="Year" required placeholder="On what year was published?" pattern=".*\S.*"></td>                        
+                    </tr>            
+                    <tr>
+                        <td>Amount:</td>
+                        <td><input type="number" property="Amount" required placeholder="How many copies?" pattern=".*\S.*"></td>                        
+                    </tr> 
+                </table>
+                <div>
+                    <button id="BtAddBook" class="FormButtons" onclick="App.BooksVM.AddNewBook()">Add Book</button>
+                    <button id="BtUpdateBook" class="BtInvisible" onclick="App.BooksVM.UpdateBook()">Update Book</button>                    
+                    <button id="BtCleanBook" class="FormButtons" onclick="App.BooksVM.CleanBookForm()">Clean</button>
+                </div>
+
+                <div id="BooksTableContent" title= "Added Books">
+
+                </div>
+            </div>
+            <div id="UsersView">
+
+                <div>
+                    <h2>Add new User</h1>
+                </div>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" property="Name" required placeholder="What is your name?" pattern=".*\S.*"></td>
+                    </tr>
+                    <tr>
+                        <td>Surname:</td>
+                        <td><input type="text" property="Surname" required placeholder="What is your surname?"></td>                        
+                    </tr>      
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" property="Email" required placeholder="What is your email?"></td>                        
+                    </tr>             
+                    <tr>
+                        <td>Birth Date:</td>
+                        <td><input type="date" property="BirthDate" required placeholder="Because we want to wish you HB!"></td>                        
+                    </tr>  
+                </table>
+                <div>
+                    <button id="BtAddUser" class="FormButtons" onclick="App.UsersVM.AddNewUser()">Add User</button>
+                    <button id="BtUpdateUser" class="BtInvisible" onclick="App.UsersVM.UpdateUser()">Update Client</button>                    
+                    <button id="BtCleanUser" class="FormButtons" onclick="App.UsersVM.CleanUserForm()">Clean</button>
+                </div>
+
+                <div id="UsersTableContent" title= "Added Users">
+
+                </div>
+            </div>
+            <div id="LendsView">
+                <div>
+                    <h2>Handle lends</h1>
+                </div>
+                <table>
+                    <tr>
+                        <td>Select User:</td>
+                        <td>
+                            <div class="dropdown">
+                                <button id="LendsVM_BtSelectedUser" onclick="App.LendsVM.ShowUsers()" class="dropbtn">Select User</button>
+                                <div id="DDUsers" class="dropdown-content">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select Book:</td>
+                        <td>
+                            <div class="dropdown">
+                                <button id="LendsVM_BtSelectedBook" onclick="App.LendsVM.ShowBooks()" class="dropbtn">Select Book</button>
+                                <div id="DDBooks" class="dropdown-content">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button id="BtLendBook" onclick="App.LendsVM.AddLend()" style="display:none">Lend Book</button>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    
+                </div>
+
+                <div id="LendsTableContent" title= "Lends">
+
+                </div>
+            </div>
+            <div id="RoomsView">
+                <div>
+                    <h2>Add new room</h1>
+                </div>
+                <table>
+                    <tr>
+                        <td>Code:</td>
+                        <td><input type="text" property="Code" required placeholder="Room's code?" pattern=".*\S.*"></td>
+                    </tr>
+                    <tr>
+                        <td>Color:</td>
+                        <td><input type="color" property="Color" list="presetColors" required placeholder="" pattern=".*\S.*">
+                            <datalist id="presetColors">
+                                <option value="#45C2FF">
+                                <option value="#FF9F81">
+                                <option value="#00CDC9">
+                            </datalist>
+                        </td>                        
+                    </tr>            
+                    <tr>
+                        <td>Capacity(max.6):</td>
+                        <td><input type="number" property="Capacity" required placeholder="Room's capacity?" pattern=".*\S.*" min="0" max="6"></td>                        
+                    </tr>            
+                    <tr>
+                        <td>Is accessible?</td>
+                        <td><input type="checkbox" property="Accessible" required></td>                        
+                    </tr> 
+                </table>
+                <div>
+                    <button id="BtAddRoom" class="FormButtons" onclick="App.RoomsVM.AddNewRoom()">Add Room</button>
+                    <button id="BtUpdateRoom" class="BtInvisible" onclick="App.RoomsVM.UpdateRoom()">Update Room</button>                    
+                    <button id="BtCleanRoom" class="FormButtons" onclick="App.RoomsVM.CleanRoomForm()">Clean</button>
+                </div>
+                <div id="RoomsTableContent" title= "Added Rooms">
+
+                </div>
+            </div>
+            <div id="RoomReservationsView">
+                <div>
+                    <h2>Room reservations</h1>
+                </div>
+                <table>
+                    <tr>
+                        <td>Select Room:</td>
+                        <td>
+                            <div class="dropdown">
+                                <button id="RoomReservationsVM_BtSelectedRoom" onclick="App.RoomReservationsVM.ShowRooms()" class="dropbtn">Select Room</button>
+                                <div id="DDRooms" class="dropdown-content">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hour:</td>
+                        <td><input id="SelectedHour" type="time" property="Hour" value="09:00"></td>  
+                    </tr>
+                    <tr>
+                        <td>Select User:</td>
+                        <td>
+                            <div class="dropdown">
+                                <button id="RoomReservationsVM_BtSelectedUser" onclick="App.RoomReservationsVM.ShowUsers()" class="dropbtn">Select User</button>
+                                <div id="DDRoomsUsers" class="dropdown-content">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button id="BtAddReservation" class="FormButtons" onclick="App.RoomReservationsVM.AddReservation()" style="display:none">Make a reservation</button>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    
+                </div>
+
+                <div id="RoomReservationsTableContent" title= "Rooms Reservations">
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
