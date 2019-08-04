@@ -1,0 +1,19 @@
+body 
+{ 
+    margin: 0px;
+    height: 100vh; 
+    background-color: rgb(24, 23, 23);
+}
+
+.BtInvisible
+{
+    display: none;
+    color: #007bff;
+    border-color: #007bff;
+    border: 1px solid;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

@@ -1,0 +1,42 @@
+#RoomReservationsTableContent table
+{
+    border-radius: 10px;
+    border-collapse: collapse;
+    background: #575757;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-left:5px;
+}   
+
+#RoomReservationsTableContent td 
+{
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: rgb(216, 216, 216);
+}
+#RoomReservationsTableContent button
+{
+    background-color: #007bff;
+    color: #ffffff;
+    width: auto;
+}
+#RoomReservationsTableContent thead
+{
+    font-size: 15px;
+    background-color: #575757;
+    color:white;
+    line-height: 2;
+    font-weight: unset;
+    border-radius: 10px;
+    padding-left:5px;
+}
+#RoomReservationsTableContent tbody
+{
+    font-size: 15px;
+    background-color: #e9e9e9;
+    line-height: 1.2;
+    font-weight: unset;
+    border-radius: 10px;
+    padding-left:5px;
+}
