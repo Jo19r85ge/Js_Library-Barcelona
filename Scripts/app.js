@@ -12,7 +12,6 @@ class CrazyBooksApp
         this.LendsVM = new LendsViewModel();
         this.RoomsVM = new RoomsViewModel();
         this.RoomReservationsVM = new RoomReservationsViewModel();
-
         this.MenuVM = new MenuViewModel();
         this.MenuVM.ShowView(MenusViews.Books);
     }
