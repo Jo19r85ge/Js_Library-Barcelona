@@ -12,7 +12,6 @@ class CrazyBooksApp
         this.LendsVM = new LendsViewModel();
         this.RoomsVM = new RoomsViewModel();
         this.RoomReservationsVM = new RoomReservationsViewModel();
-
         this.MenuVM = new MenuViewModel();
         this.MenuVM.ShowView(MenusViews.Books);
     }
@@ -39,9 +38,11 @@ window.onclick = function(event)
     {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
+        
       for (i = 0; i < dropdowns.length; i++) 
       {
         var openDropdown = dropdowns[i];
+          
         if (openDropdown.classList.contains('show')) 
         {
             openDropdown.classList.remove('show');
