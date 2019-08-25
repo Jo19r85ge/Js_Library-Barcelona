@@ -49,4 +49,4 @@ window.onclick = function(event)
         }
       }
     }
-  }
+}
