@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Library Barcelona !!</title>
     
     <!--Styles-->    
-    
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="Css/index.css"/>
     <link rel="stylesheet" href="Css/MenuView.css"/>
@@ -22,11 +20,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     
     <!--App-->    
-    
     <script src="Scripts/app.js"></script>
 
     <!--Models-->
-    
     <script src="Scripts/Models/Book.js"></script>
     <script src="Scripts/Models/User.js"></script>
     <script src="Scripts/Models/Lend.js"></script>
@@ -34,13 +30,11 @@
     <script src="Scripts/Models/RoomReservation.js"></script>
 
     <!--Handlers-->
-    
     <script src="Scripts/Handlers/TableHandler.js"></script>
     <script src="Scripts/Handlers/InputDataHandler.js"></script>
     <script src="Scripts/Handlers/DropDownHandler.js"></script>
     
     <!--Views-->
-    
     <script src="Scripts/Views/MenuViewModel.js"></script>
     <script src="Scripts/Views/UsersViewModel.js"></script>
     <script src="Scripts/Views/BooksViewModel.js"></script>
@@ -51,7 +45,6 @@
 </head>
 <body>
     <div id="IndexView">
-
         <div class="MenuView">
             <table class="MenuTable">
                 <tr>
@@ -112,13 +105,10 @@
                     <button id="BtUpdateBook" class="BtInvisible" onclick="App.BooksVM.UpdateBook()">Update Book</button>                    
                     <button id="BtCleanBook" class="FormButtons" onclick="App.BooksVM.CleanBookForm()">Clean</button>
                 </div>
-
                 <div id="BooksTableContent" title= "Added Books">
-
                 </div>
             </div>
             <div id="UsersView">
-
                 <div>
                     <h2>Add new User</h2>
                 </div>
@@ -145,9 +135,7 @@
                     <button id="BtUpdateUser" class="BtInvisible" onclick="App.UsersVM.UpdateUser()">Update Client</button>                    
                     <button id="BtCleanUser" class="FormButtons" onclick="App.UsersVM.CleanUserForm()">Clean</button>
                 </div>
-
                 <div id="UsersTableContent" title= "Added Users">
-
                 </div>
             </div>
             <div id="LendsView">
@@ -180,11 +168,8 @@
                     </tr>
                 </table>
                 <div>
-                    
                 </div>
-
                 <div id="LendsTableContent" title= "Lends">
-
                 </div>
             </div>
             <div id="RoomsView">
@@ -221,7 +206,6 @@
                     <button id="BtCleanRoom" class="FormButtons" onclick="App.RoomsVM.CleanRoomForm()">Clean</button>
                 </div>
                 <div id="RoomsTableContent" title= "Added Rooms">
-
                 </div>
             </div>
             <div id="RoomReservationsView">
@@ -258,11 +242,8 @@
                     </tr>
                 </table>
                 <div>
-                    
                 </div>
-
                 <div id="RoomReservationsTableContent" title= "Rooms Reservations">
-
                 </div>
             </div>
         </div>
