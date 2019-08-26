@@ -121,7 +121,6 @@ class RoomsViewModel
             let i = this.Rooms.findIndex((x)=>x === room);
             this.Rooms.splice(i, 1);
 
-            // do validations
             this.TableHandler.DeleteRow(room);
         } 
         else 
@@ -129,6 +128,4 @@ class RoomsViewModel
             console.log("You pressed Cancel! cobarde pecador");
         }        
     }
-
-
 }

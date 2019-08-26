@@ -5,7 +5,6 @@ class Lend
         this.Book = book;
         this.Title = book === undefined ? "" : book.Title;
 
-        
         this.LendedOn = new Date();
         this.ExpiresOn = new Date();
 

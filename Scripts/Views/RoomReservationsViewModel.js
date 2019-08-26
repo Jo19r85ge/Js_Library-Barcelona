@@ -27,9 +27,7 @@ class RoomReservationsViewModel
                                         this.SelectedUser = user;
                                         
                                         if (this.SelectedRoom != null)
-                                            BtAddReservation.style.display = "block";  
-
-                                        //this.ShowUsersRooms(user);
+                                            BtAddReservation.style.display = "block";
                                     });                            
 
         let buttons = 
@@ -113,7 +111,6 @@ class RoomReservationsViewModel
             let j = this.SelectedRoom.ReservedHours.findIndex((x)=>x === reservation);
             this.SelectedRoom.ReservedHours.splice(j, 1);
 
-            // do validations
             this.TableHandler.DeleteRow(reservation);
         } 
         else 
@@ -121,5 +118,4 @@ class RoomReservationsViewModel
             console.log("Reserva cancelada");
         }        
     }
-
 }

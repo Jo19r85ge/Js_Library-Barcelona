@@ -48,16 +48,16 @@ class InputDataHandler
         {
             return false
         }
+        
         else
         {
             let propValues = this.GetAllModelPropertiesInNode(node);
 
             for (let i in propValues)
             {
-                    let info = propValues[i];
-                    model[info.Property] = info.Value;
+                let info = propValues[i];
+                model[info.Property] = info.Value;
             }
-    
         }
     }
 

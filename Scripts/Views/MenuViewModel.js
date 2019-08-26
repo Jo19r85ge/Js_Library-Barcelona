@@ -53,7 +53,6 @@ class MenuViewModel
                 RoomReservationsView.style.display = "block";    
 
                 break;
-
         }
     }
 }
@@ -65,5 +64,4 @@ MenusViews =
     Lends : 3,
     Rooms : 4,
     RoomReservations : 5
-
 }

@@ -93,7 +93,6 @@ class UsersViewModel
             let i = this.Users.findIndex((x)=>x === user);
             this.Users.splice(i, 1);
 
-            // do validations
             this.TableHandler.DeleteRow(user);
         } 
         else 
