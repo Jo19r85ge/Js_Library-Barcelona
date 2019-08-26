@@ -12,7 +12,8 @@
     padding-top:100px;
 }
 
-.pure-material-button-contained {
+.pure-material-button-contained 
+{
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -40,12 +41,13 @@
     margin-top: 10px;
 }
 
-.pure-material-button-contained::-moz-focus-inner {
+.pure-material-button-contained::-moz-focus-inner 
+{
     border: none;
 }
 
-/* Overlay */
-.pure-material-button-contained::before {
+.pure-material-button-contained::before 
+{
     content: "";
     position: absolute;
     top: 0;
@@ -57,7 +59,8 @@
     transition: opacity 0.2s;
 }
 
-.pure-material-button-contained::after {
+.pure-material-button-contained::after 
+{
     content: "";
     position: absolute;
     left: 50%;

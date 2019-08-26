@@ -11,6 +11,7 @@
     background-color: whitesmoke;
 
 }
+
 input
 {
     width: 100%;
@@ -29,11 +30,6 @@ input:not(:placeholder-shown)
 {
     border-bottom: 2px solid hsl(0, 76%, 50%);
 }
-
-/* input:invalid 
-{
-    border-bottom: 2px solid red;
-} */
   
 input:valid 
 {
@@ -67,11 +63,13 @@ button
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 button:hover
 {
     background-color: rgb(25, 113, 255);
     color:white;
 }
+
 .FormButtons
 {
     color: #007bff;

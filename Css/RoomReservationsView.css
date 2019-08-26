@@ -15,12 +15,14 @@
     text-align: center;
     border-bottom: rgb(216, 216, 216);
 }
+
 #RoomReservationsTableContent button
 {
     background-color: #007bff;
     color: #ffffff;
     width: auto;
 }
+
 #RoomReservationsTableContent thead
 {
     font-size: 15px;
@@ -31,6 +33,7 @@
     border-radius: 10px;
     padding-left:5px;
 }
+
 #RoomReservationsTableContent tbody
 {
     font-size: 15px;
